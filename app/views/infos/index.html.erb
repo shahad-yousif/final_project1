@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Listing Infos</h1>
 
-<table>
+<table class="table table-hover table-bordered">
   <thead>
-    <tr>
+    <tr class="info">
       <th>First name</th>
       <th>Last name</th>
       <th>Gender</th>
@@ -26,9 +25,9 @@
         <td><%= info.email %></td>
         <td><%= info.phone_number %></td>
         <td><%= info.country %></td>
-        <td><%= link_to 'Show', info %></td>
-        <td><%= link_to 'Edit', edit_info_path(info) %></td>
-        <td><%= link_to 'Destroy', info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', info,class:"btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_info_path(info),class:"btn btn-default" %></td>
+        <td><%= link_to 'Destroy', info, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +35,5 @@
 
 <br>
 
-<%= link_to 'New Info', new_info_path %>
+<%= link_to 'New Info', new_info_path,class:"btn btn-default" %>
+
