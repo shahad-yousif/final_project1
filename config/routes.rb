@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  resources :bookings
+  resources :flights
+  resources :companies
+  resources :airports
   resources :infos
   devise_for :users
-  root 'infos#index'
+  root 'flights#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
